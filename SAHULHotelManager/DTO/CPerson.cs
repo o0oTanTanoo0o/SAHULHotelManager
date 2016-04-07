@@ -22,6 +22,13 @@ namespace SAHULHotelManager.DTO
         private string _address;
         private string _phone;
         private string _folk;
+        private string v1;
+        private int v2;
+        private int v3;
+        private string v4;
+        private string v5;
+        private string v6;
+        private string v7;
         #endregion
 
         #region "Property"
@@ -204,6 +211,17 @@ namespace SAHULHotelManager.DTO
             this.Folk = folk;
             this.DoB = doB;
         }
+
+        public CPerson(string v1, int v2, int v3, string v4, string v5, string v6, string v7)
+        {
+            this.v1 = v1;
+            this.v2 = v2;
+            this.v3 = v3;
+            this.v4 = v4;
+            this.v5 = v5;
+            this.v6 = v6;
+            this.v7 = v7;
+        }
         #endregion
 
         #region "Methods"
@@ -217,6 +235,23 @@ namespace SAHULHotelManager.DTO
                 + "Phone: " + this.Phone + '\n'
                 + "Folk: " + this.Folk + '\n'
                 + "Date of Birth: " + this.DoBToDateInVietnamese + '\n';
+        }
+
+        public List<CPerson> GenerateObjects()
+        {
+
+        List<CPerson> Person = new List<CPerson>();
+            Person.Add(new CPerson("Trần Ngọc Tân", 0, 1996/7/14, "1","Hà Nội", "0639576810", "Kinh"));
+            Person.Add(new CPerson("Nguyễn Tuấn Anh", 0, 1996 / 7 / 14, "1", "Hà Nội", "0639576810", "Kinh"));
+            Person.Add(new CPerson("Đặng Huy Phong", 0, 1996 / 7 / 14, "1", "Hà Nội", "0639576810", "Kinh"));
+            Person.Add(new CPerson("Uông Đức Tùng", 0, 1996 / 7 / 14, "1", "Hà Nội", "0639576810", "Kinh"));
+            Person.Add(new CPerson("Nguyễn Huy Công", 0, 1996 / 7 / 14, "1", "Hà Nội", "0639576810", "Kinh"));
+            Person.Add(new CPerson("Doãn Trọng Anh", 0, 1996 / 7 / 14, "1", "Hà Nội", "0639576810", "Kinh"));
+            Person.Add(new CPerson("Trần Ngọc Tân", 0, 1996 / 7 / 14, "1", "Hà Nội", "0639576810", "Kinh"));
+            Person.Add(new CPerson("Trần Ngọc Tân", 0, 1996 / 7 / 14, "1", "Hà Nội", "0639576810", "Kinh"));
+            Person.Add(new CPerson("Trần Ngọc Tân", 0, 1996 / 7 / 14, "1", "Hà Nội", "0639576810", "Kinh"));
+            Person.Add(new CPerson("Trần Ngọc Tân", 0, 1996 / 7 / 14, "1", "Hà Nội", "0639576810", "Kinh"));
+            return Person;
         }
         #endregion
     }
